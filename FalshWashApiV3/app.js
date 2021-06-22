@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 //MySql
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: 'us-cdbr-east-04.cleardb.com',
     user: 'b5e67e4b7ec3c7',
     password: '14b605f9',
@@ -64,12 +64,12 @@ app.put('/update/:id', (req, res) => {
 app.delete('/delete/:id', (req, res) => {
     app.send('Delete user');
 });
-
+/*
 //Check connection
 connection.connect(error => {
     if (error) throw error;
     
     console.log('Database connected');
 });
-
+*/
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
