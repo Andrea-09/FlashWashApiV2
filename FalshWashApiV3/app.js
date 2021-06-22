@@ -10,15 +10,15 @@ app.use(express.json());
 
 //MySql
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'proyectoredesdb'
+    host: 'us-cdbr-east-04.cleardb.com',
+    user: 'b5e67e4b7ec3c7',
+    password: '14b605f9',
+    database: 'heroku_900d6af0ccdda05'
 });
 
 // Route
 app.get('/', (req, res) => {
-    res.send('Welcome to the hungle');
+    res.send('Hello world!');
 });
 
 // all users
